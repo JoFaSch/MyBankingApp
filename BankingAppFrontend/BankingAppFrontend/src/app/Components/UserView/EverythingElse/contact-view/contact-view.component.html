@@ -1,0 +1,46 @@
+
+<app-validation></app-validation>
+
+
+<div *ngIf='loggedInUser'>
+    <div>
+        <app-user-nav-bar ></app-user-nav-bar>
+        <app-user-nav-bar-vertical></app-user-nav-bar-vertical>
+    </div>
+        
+
+
+
+    <div style="position: absolute; top: 75px; left:107px;">
+        <div style=" margin-left: 90%; border-radius: 5%; opacity: 0.04">
+        <img src="https://www.kotzendes-einhorn.de/blog/wp-content/uploads/2014/02/Troll-face.png" style="height:500px; border-radius: 35%" >
+        </div>
+      <div style="width: 300px; height: 400px; position: absolute; margin-top: -500px">
+        <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-interval="1000">
+                <img src="assets/bild3.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item" data-interval="1000">
+                <img src="assets/bild4.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item" data-interval="1000">
+                <img src="assets/bild2.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item" data-interval="1000">
+                  <img src="assets/bild1.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+      </div>
+    </div>
+
+  </div>

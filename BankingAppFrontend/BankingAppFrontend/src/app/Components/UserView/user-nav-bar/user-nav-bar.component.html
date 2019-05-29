@@ -1,0 +1,75 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-image: url(https://colorate.azurewebsites.net/SwatchColor/2E7BFF)" >
+  <a class="navbar-brand" routerLink="/home" style="color:white">Katsching!</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/customerOverview" style="color:white">Home </a>
+      </li>
+      
+      <li class="nav-item dropdown" > 
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white">
+          Account overview
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-image: url(https://colorate.azurewebsites.net/SwatchColor/2E7BFF)">
+          <a class="dropdown-item" routerLink="/customerOverview" style="color: black">Account overview</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" routerLink="/showAccount" style="color:black">Detailed Account</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" routerLink="/userTransfer" style="color: black">Transfer</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white">
+          Everything else
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-image: url(https://colorate.azurewebsites.net/SwatchColor/2E7BFF)">
+          <a class="dropdown-item" routerLink="/contact" style="color:black">Contact</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" routerLink="/faq" style="color:black">FAQs</a>
+          <div class="dropdown-divider" ></div>
+          <a class="dropdown-item" routerLink="/mailbox" style="color:black">Mailbox</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" routerLink="/atmfinder" style="color:black">ATM-Finder</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" routerLink="/productsAndInformation" style="color:black">Products & Information</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" routerLink="/runningOrders" style="color:black">Running Orders</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" routerLink="/stockMarket" style="color:black">Stock market</a>
+        </div>
+      </li>
+
+      <!-- <li>
+        {{loggedInUser.firstName}}
+      </li> -->
+      <!-- <li style="color: #2E7BFF">____________________________________________________</li> -->
+<!-- 
+    </div> -->
+
+      <form class="form-inline my-2 my-lg-0">
+      
+        <a class="" href="/userHome" (click)='logout()' style="color:white">Logout</a>
+      
+    </form>
+
+
+      <!-- <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+              <a class="nav-link" href="" data-target="#myModal" data-toggle="modal">About</a>
+          </li>
+      </ul> -->
+    
+    
+    </ul>
+
+
+    <!-- <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form> -->
+  </div>
+</nav>

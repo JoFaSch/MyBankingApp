@@ -1,0 +1,55 @@
+<app-nav-bar></app-nav-bar>
+<div *ngIf='customerList'>
+
+  <!-- <button (click)='testi()'>test</button>
+  <ul *ngFor='let customer of customerList' style="opacity:0.95">
+    
+    <div *ngIf='test'>
+      <li class="list-group-item list-group-item-action list-group-item-secondary"><b>Customer-ID:</b> {{customer.id}}</li>
+      <li class="list-group-item list-group-item-action list-group-item-light"><b>Balance:</b> {{customer.lastName}}, {{customer.firstName}}</li>
+      <li class="list-group-item list-group-item-action list-group-item-light"><b>Adress:</b> {{customer.adress.street}} {{customer.adress.houseNr}}, {{customer.adress.zip}} {{customer.adress.city}}</li>
+      <li class="list-group-item list-group-item-action list-group-item-light" ><b>Iban:</b> {{customer.accountList[0].iban.value}}</li>
+      <li class="list-group-item list-group-item-action list-group-item-light" ><b>Password:</b> {{customer.password}}</li>
+      <li class="list-group-item list-group-item-action list-group-item-light" ><b>Account(s):</b> <ol><li *ngFor='let account of customer.accountList'><b>Name:</b> {{account.name}} <b> IBAN:</b> {{account.iban.value}}<ul><li><b>${{account.balance.toFixed(2)}}</b></li></ul></li></ol></li>
+    </div>
+
+  </ul> -->
+
+  <div class="container" *ngFor="let customer of customerList; let i = index">
+      <a href="#customerList-{{ i }}" class="badge badge-secondary" data-toggle="collapse"><b>ID:</b> {{customer.id}} <b>Name:</b> {{customer.firstName}} {{customer.lastName}}</a>
+      <div id="customerList-{{ i }}" class="collapse">
+        <ul style="list-style: none" style="opacity:0.95; width: 640px">
+          <br>
+            <li class="list-group-item list-group-item-action list-group-item-secondary"><b>Customer-ID:</b> {{customer.id}}</li>
+            <li class="list-group-item list-group-item-action list-group-item-light"><b>Balance:</b> {{customer.lastName}}, {{customer.firstName}}</li>
+            <li class="list-group-item list-group-item-action list-group-item-light"><b>Adress:</b> {{customer.adress.street}} {{customer.adress.houseNr}}, {{customer.adress.zip}} {{customer.adress.city}}</li>
+            <li class="list-group-item list-group-item-action list-group-item-light" ><b>Password:</b> {{customer.password}}</li>
+            <li class="list-group-item list-group-item-action list-group-item-light" ><b>Account(s):</b> <ol><li *ngFor='let account of customer.accountList'><b>Name:</b> {{account.name}} <b> IBAN:</b> {{account.iban.value}}<ul><li><b>${{account.balance.toFixed(2)}}</b></li></ul></li></ol></li>
+        </ul>
+      </div>
+    </div>
+
+
+
+
+
+  <!-- <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Password</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor='let customer of customerList'>
+          <th scope="row">{{customer.id}}</th>
+          <td>{{customer.firstName}}</td>
+          <td>{{customer.lastName}}</td>
+          <td>{{customer.password}}</td>
+        </tr>
+
+      </tbody>
+    </table> -->
+</div>

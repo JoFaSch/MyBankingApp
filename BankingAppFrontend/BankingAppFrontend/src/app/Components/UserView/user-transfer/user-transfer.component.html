@@ -1,0 +1,77 @@
+<app-validation></app-validation>
+
+<div *ngIf='loggedInUser'>
+  <div>
+      <app-user-nav-bar></app-user-nav-bar>
+      <app-user-nav-bar-vertical></app-user-nav-bar-vertical>
+  </div>
+
+
+  
+  <div style="position: absolute; text-align: center; left: 35%">
+     
+      <div style="width: 100%; display:inline-block; text-align: center; margin-top: -30px;">
+          <div style="opacity: 0.85; background-color: whitesmoke; width: 400px; height:500px; text-align: center; display:inline-block; border-radius: 95px; "> 
+                  
+              <div style="width: 350px; display:inline-block; width: 80%; margin-top: 25px;">
+    
+    
+    
+    <div style="margin-top: 25px">
+          <select class="form-control" [(ngModel)]='iban1'>
+              <option *ngFor=' let account of loggedInUser.accountList'>{{account.iban.value}}</option>
+          </select>
+      </div>
+      <!-- <div>
+      <select class="form-control" [(ngModel)]='iban1' >
+        <option *ngFor=' let account of loggedInUser.accountList'>{{account.iban.value}}</option>
+      </select>
+    </div> -->
+
+    <p><input placeholder="Payee IBAN" [(ngModel)]='payeeIban' class="form-control" style="margin-top:5px; text-align: center"></p>
+    <p><input placeholder="$$$" [(ngModel)]='amount' class="form-control" style="text-align: center; margin-top: 15px"></p>
+<!-- 
+    <p><input placeholder="Reference" [(ngModel)]='amount' class="form-control" style="text-align: center; margin-top: 15px; height: 50px"></p> -->
+
+    <p><textarea rows = "5" cols = "40" [(ngModel)]='reference' placeholder="Reference" class="form-control" style="text-align: center; "></textarea><br></p>
+
+
+    <button type="button"  class="btn btn-primary" data-toggle="modal" data-target="#transferModal" style="width: 60%; margin-top: -10px">
+        Transfer
+      </button>
+
+
+
+
+
+
+
+</div>
+</div>
+</div>
+
+
+
+<div class="modal" id="transferModal" tabindex="1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Please check your inputs</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure you want to transfer ${{amount}} to {{payeeIban}}?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">God no!</button>
+          <button type="button" class="btn btn-primary" (click)='transfer()' routerLink="/showAccount">Yes, please!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  </div>
+</div>

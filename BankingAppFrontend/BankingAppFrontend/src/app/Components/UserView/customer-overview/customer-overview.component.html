@@ -1,0 +1,37 @@
+<app-validation></app-validation>
+
+<div *ngIf='loggedInUser'>
+
+
+  <div>
+    <app-user-nav-bar></app-user-nav-bar>
+    <app-user-nav-bar-vertical></app-user-nav-bar-vertical>
+  </div>
+
+
+
+  <div style="position: absolute; top: 65px; left:115px;">
+    
+    <h3>Hello {{loggedInUser.firstName}} {{loggedInUser.lastName}}</h3>
+    <div *ngIf='lastLogin'>
+      <p>Your last login was on {{lastLogin | date:'short'}}!</p>
+    </div>
+    <p><b>Adress:</b> {{loggedInUser.adress.street}} {{loggedInUser.adress.houseNr}}, {{loggedInUser.adress.zip}} {{loggedInUser.adress.city}}</p>
+    <p><b>Iban:</b> {{loggedInUser.accountList[0].iban.value}}</p>
+    <p><b>Overall balance:</b> ${{totalBalance.toFixed(2)}}</p>
+
+
+    <div style='text-align: center'>
+      <ul *ngFor='let transfer of loggedInUser.accountList[0].transferList.slice().reverse()'>
+        <li class="list-group-item list-group-item-action list-group-item-secondary"><b>Date:</b> {{transfer.date | date:'short'}}</li>
+        <li class="list-group-item list-group-item-action list-group-item-light"><b>Amount:</b> ${{transfer.amount.toFixed(2)}}</li>
+        <li class="list-group-item list-group-item-action list-group-item-light"><b>Payee:</b> {{transfer.receiverFirstName}} {{transfer.receiverLastName}} <b> IBAN: </b>{{transfer.receiverIban}}</li>
+        <li class="list-group-item list-group-item-action list-group-item-light"><b>Payer:</b> {{transfer.senderFirstName}} {{transfer.senderLastName}} <b> IBAN: </b>{{transfer.senderIban}}</li>
+        <li class="list-group-item list-group-item-action list-group-item-light">{{transfer.reference}}</li>
+      </ul>
+    </div>
+
+    <div #gmap style="width:100%;height:400px"></div>
+
+  </div>
+</div>

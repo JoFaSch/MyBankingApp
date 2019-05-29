@@ -1,0 +1,14 @@
+<app-nav-bar></app-nav-bar>
+
+<div style="width: 100%; display:inline-block; text-align: center; margin-top: 50px;">
+        <div style="opacity: 0.85; background-color: whitesmoke; width: 400px; height:500px; text-align: center; display:inline-block; border-radius: 95px;"> 
+                <h4 style="margin-top: 85px">Add an account to a Customer</h4>
+            <div style="width: 350px; display:inline-block; width: 80%; margin-top: 25px;">
+            
+            <input placeholder="Account Name" [(ngModel)]='accountName' class="form-control" aria-label="Sizing example input">
+            <input placeholder="Customer ID" [(ngModel)]='customerId' class="form-control" aria-label="Sizing example input" style="margin-top:25px;">
+                    
+            <button (click)='add()' style="margin-top:25px" class="btn btn-outline-primary">add Account</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+<app-nav-bar></app-nav-bar>
+<br>
+<br>
+<button (click)=newRandomCustomer() type="button" class="btn btn-danger">New Random Customer</button>
+<br>
+<br>
+<br>
+<br>
+<div class="input-group" style="width: 70%; margin: auto" >
+  <div class="input-group-prepend">
+    <span class="input-group-text">First and last name</span>
+  </div>
+    <input type="text" aria-label="First name"  placeholder="First name" [(ngModel)]='firstName'>
+    <input type="text" aria-label="Last name" class="form-control" placeholder="Last name" [(ngModel)]='lastName'>
+  <br>
+</div>
+
+<div class="input-group" style="width: 70%; margin: auto">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1" >Email address</span>
+  </div>
+    <input type="text" class="form-control" placeholder="name@example.com" aria-label="Email address" aria-describedby="basic-addon1" [(ngModel)]='mailAddress'>
+</div>
+ 
+<div class="input-group" style="width: 70%; margin: auto" >
+  <div class="input-group-prepend">
+    <span class="input-group-text">Address</span>
+  </div>
+    <input type="text" aria-label="Street" class="form-control" placeholder="Street" [(ngModel)]='street'>
+    <input type="text" aria-label="House number" class="form-control" placeholder="House number" [(ngModel)]='houseNumber'>
+    <input type="number" aria-label="Zip-code" class="form-control" placeholder="Zip-Code" [(ngModel)]='zip'>
+    <input type="text" aria-label="City" class="form-control" placeholder="City" [(ngModel)]='city'>
+    
+</div>
+
+
+<br>
+
+  <div style="text-align: center">
+    <button type="button" class="btn btn-primary" (click)='newSpecifiedCustomer()' >Submit</button>
+  </div>
